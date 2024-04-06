@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="chan">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>chan's Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="resources/images/favicon.png">
+
+    <link rel="preload"  href="resources/images/1.jpeg">
+    <link rel="prefetch" href="resources/images/2.jpeg">
+    <link rel="prefetch" href="resources/images/3.jpeg">
+    <link rel="prefetch" href="resources/images/4.jpeg">
+    <link rel="prefetch" href="resources/images/5.jpeg">
+    <link rel="prefetch" href="resources/images/6.jpeg">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="window-bg">
+        <div class="front-img"></div>
+        <div class="titlediv">
+            <div id=titleb>chan' Website</div>
+            <div id="clock"></div>
+        </div>
+        <div class="windowbackgroundarea1"><div id="Subtitle">Contents:</div></div>
+        <div class="windowbackgroundarea2">
+        <div class="centerDivs">
+            <div class="category">
+                <div class="categorytitle">Contact:</div>
+                <div class="categorycontent"><a href="https://github.com/duong-nguy/">Github</a> - <a href="mailto://chanduong1999@gmail.com">Email</a> - <a href="https://twitter.com/DuongNguy72907">Twitter</a> - <a href="https://discord.gg/g3MKgwn9">Discord</a></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="pixeloverlay"></div>
+    <div class="vignette"></div>
+    <script>
+        var clock=document.getElementById("clock");
+        function updateClock(){
+            var date=new Date();
+            date.setHours(date.getHours()+0)
+            var hours = date.getHours().toString();
+            var minutes = date.getMinutes().toString();
+            var seconds = date.getSeconds().toString();
+            if (hours.length==1){
+                hours="0"+hours
+            }
+            if (minutes.length==1){
+                minutes="0"+minutes
+            }
+            if (seconds.length==1){
+                seconds="0"+seconds
+            }
+            clock.innerHTML=hours+":"+minutes+":"+seconds;
+        }
+        updateClock();
+        setInterval(updateClock,1000);
+    </script>
+    </body>
+    </html>
