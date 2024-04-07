@@ -1,1 +1,1 @@
-[based on](https://github.com/apaz-cli/apaz-cli.github.io/tree/new)
+based on [apaz's website](https://github.com/apaz-cli/apaz-cli.github.io/tree/new)
