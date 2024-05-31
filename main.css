@@ -1,8 +1,8 @@
 /*Most easy/basic changes can be done up here in the root area, edit the rest if you know what it does.*/
 @media all and (orientation:landscape) {
   :root{
-  --stripebackground:#af92b5;         /*The color of the small stripe just under the header*/
-  --windowbackground: #8b7991;        /*The color of the background of the main window main area.*/
+  --stripebackground:#874CCC;         /*The color of the small stripe just under the header*/
+  --windowbackground: #F27BBD;        /*The color of the background of the main window main area.*/
   --maintextcolor:#000;               /*The color of the text in the main area.*/
   --headercolor:#fff;                 /*The color of the text in the header/title.*/
   /* --linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
@@ -21,8 +21,8 @@
 
   /* The following settings are for the pixel overlay effect:*/
   --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
-  --pixeloverlay-itensity:0.1;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
-  --pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
+  --pixeloverlay-itensity:0.3;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
+  --pixeloverlay-resolution:1.0063;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
 
   /* The following setting are for the vignette overlay effect:*/
   --vignetteoverlay-exists:visible;     /*Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
@@ -176,8 +176,7 @@
     top: 0px;
     left: 0px;
     pointer-events: none;
-    background: repeating-linear-gradient(90deg,rgba(0, 0, 255, var(--pixeloverlay-itensity)),rgba(0, 0, 255, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px),rgba(255, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px),rgba(255, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*2px),rgba(0, 255, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*2px),rgba(0, 255, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*3px)),
-    repeating-linear-gradient(0deg,rgba(0, 0, 0, var(--pixeloverlay-itensity)),rgba(0, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px), rgba(255, 255, 255, 0) 1px,rgba(255, 255, 255, 0) calc(var(--pixeloverlay-resolution)*3px));
+    background: repeating-linear-gradient(0deg,rgba(0, 0, 0, var(--pixeloverlay-itensity)),rgba(0, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px), rgba(255, 255, 255, 0) 1px,rgba(255, 255, 255, 0) calc(var(--pixeloverlay-resolution)*3px));
     visibility: var(--pixeloverlay-exists);
   }
   .vignette{
@@ -212,8 +211,8 @@
 
 @media all and (orientation:portrait) {
   :root{
-  --stripebackground:#af92b5;         /*The color of the small stripe just under the header*/
-  --windowbackground:#8b7991;        /*The color of the background of the main window main area.*/
+  --stripebackground:#874CCC;         /*The color of the small stripe just under the header*/
+  --windowbackground:#F27BBD;        /*The color of the background of the main window main area.*/
   --maintextcolor:#000;               /*The color of the text in the main area.*/
   --headercolor:#fff;                 /*The color of the text in the header/title.*/
   /* --linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
@@ -232,8 +231,8 @@
 
   /* The following settings are for the pixel overlay effect:*/
   --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
-  --pixeloverlay-itensity:0.1;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
-  --pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
+  --pixeloverlay-itensity:0.3;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
+  --pixeloverlay-resolution:1.0063;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
 
   /* The following setting are for the vignette overlay effect:*/
   --vignetteoverlay-exists:visible;     /*Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
@@ -387,8 +386,7 @@
     top: 0px;
     left: 0px;
     pointer-events: none;
-    background: repeating-linear-gradient(90deg,rgba(0, 0, 255, var(--pixeloverlay-itensity)),rgba(0, 0, 255, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px),rgba(255, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px),rgba(255, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*2px),rgba(0, 255, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*2px),rgba(0, 255, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*3px)),
-    repeating-linear-gradient(0deg,rgba(0, 0, 0, var(--pixeloverlay-itensity)),rgba(0, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px), rgba(255, 255, 255, 0) 1px,rgba(255, 255, 255, 0) calc(var(--pixeloverlay-resolution)*3px));
+    background:repeating-linear-gradient(0deg,rgba(0, 0, 0, var(--pixeloverlay-itensity)),rgba(0, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px), rgba(255, 255, 255, 0) 1px,rgba(255, 255, 255, 0) calc(var(--pixeloverlay-resolution)*3px));
     visibility: var(--pixeloverlay-exists);
   }
   .vignette{
