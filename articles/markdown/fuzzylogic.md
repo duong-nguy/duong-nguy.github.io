@@ -37,7 +37,7 @@
 
 > These are basic operators. In class, we assumed these are true and proceeded to prove all the operators in the next session. This type of exercise can appear in the exam.
 
-### Derivertives from the basic operators
+### Derivatives from the basic operators
 
 1. $A \sub B :\iff A \cap B =A$
 
