@@ -1,8 +1,8 @@
 /*Most easy/basic changes can be done up here in the root area, edit the rest if you know what it does.*/
 @media all and (orientation:landscape) {
   :root{
-  --stripebackground:#874CCC;         /*The color of the small stripe just under the header*/
-  --windowbackground: #F27BBD;        /*The color of the background of the main window main area.*/
+  --stripebackground:#3f37c9;         /*The color of the small stripe just under the header*/
+  --windowbackground: #cae9ff;        /*The color of the background of the main window main area.*/
   --maintextcolor:#000;               /*The color of the text in the main area.*/
   --headercolor:#fff;                 /*The color of the text in the header/title.*/
   /* --linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
@@ -21,8 +21,8 @@
 
   /* The following settings are for the pixel overlay effect:*/
   --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
-  --pixeloverlay-itensity:0.3;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
-  --pixeloverlay-resolution:1.0063;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
+  --pixeloverlay-itensity:0.15;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
+  --pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
 
   /* The following setting are for the vignette overlay effect:*/
   --vignetteoverlay-exists:visible;     /*Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
@@ -211,8 +211,8 @@
 
 @media all and (orientation:portrait) {
   :root{
-  --stripebackground:#874CCC;         /*The color of the small stripe just under the header*/
-  --windowbackground:#F27BBD;        /*The color of the background of the main window main area.*/
+  --stripebackground:#3f37c9;         /*The color of the small stripe just under the header*/
+  --windowbackground:#cae9ff;        /*The color of the background of the main window main area.*/
   --maintextcolor:#000;               /*The color of the text in the main area.*/
   --headercolor:#fff;                 /*The color of the text in the header/title.*/
   /* --linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
@@ -231,8 +231,8 @@
 
   /* The following settings are for the pixel overlay effect:*/
   --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
-  --pixeloverlay-itensity:0.3;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
-  --pixeloverlay-resolution:1.0063;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
+  --pixeloverlay-itensity:0.15;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
+  --pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
 
   /* The following setting are for the vignette overlay effect:*/
   --vignetteoverlay-exists:visible;     /*Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
