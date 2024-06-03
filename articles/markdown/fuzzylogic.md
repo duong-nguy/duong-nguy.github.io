@@ -219,6 +219,46 @@ Then we have $\upsilon (U) = 0.5, \upsilon (T) = 1, \upsilon (F) = 0$
 > 
 > * Łukasiewicz often denotes as $Ł, {\implies}_Ł, {\iff}_Ł$ . Same goes for Kleene $K, {\implies}_K, {\iff}_K$
 
+### Excercises
+
+| $\vee$ | $T$ | $U$ | $F$ |
+|:------:|:---:|:---:|:---:|
+| $T$    | $T$ | $T$ | $T$ |
+| $U$    | $T$ | $U$ | $U$ |
+| $F$    | $T$ | $U$ | $F$ |
+
+| $\wedge$ | $T$ | $U$ | $F$ |
+|:--------:|:---:|:---:|:---:|
+| $T$      | $T$ | $U$ | $T$ |
+| $U$      | $U$ | $U$ | $F$ |
+| $F$      | $F$ | $F$ | $F$ |
+
+| ${\implies}_{k}$ | $T$ | $U$ | $F$ |
+|:----------------:|:---:|:---:|:---:|
+| $T$              | $T$ | $U$ | $F$ |
+| $U$              | $T$ | $U$ | $U$ |
+| $F$              | $T$ | $T$ | $T$ |
+
+| ${\implies}_{Ł}$ | $T$ | $U$ | $F$ |
+|:----------------:|:---:|:---:|:---:|
+| $T$              | $T$ | $U$ | $F$ |
+| $U$              | $T$ | $T$ | $U$ |
+| $F$              | $T$ | $T$ | $T$ |
+
+> Notice the difference between Łukasiewicz's implication and Kleene's implication
+
+| ${\iff}_{k}$ | $T$ | $U$ | $F$ |
+|:------------:|:---:|:---:|:---:|
+| $T$          | $T$ | $U$ | $F$ |
+| $U$          | $U$ | $U$ | $U$ |
+| $F$          | $F$ | $U$ | $T$ |
+
+| ${\iff}_{Ł}$ | $T$ | $U$ | $F$ |
+|:------------:|:---:|:---:|:---:|
+| $T$          | $T$ | $U$ | $F$ |
+| $U$          | $U$ | $T$ | $U$ |
+| $F$          | $F$ | $U$ | $T$ |
+
 ## Fuzzy logics
 
 We were introduced to 3 fuzzy operations, each of them has 3 versions: Zadeh, Mengenhauser (Mengen), and Łukasiewicz
@@ -231,7 +271,7 @@ Co-norm is a different way to say $AND$ or $\wedge$ in FL.
 
 2. ${T-norm}_Z : \upsilon (p). \upsilon (q)$
 
-3. ${T-norm}_Ł : \max\{0,\upsilon (p) + \upsilon(q) - 1\}$
+3. ${T-norm}_Ł : \max\{0,(\upsilon (p) + \upsilon(q)) - 1\}$
 
 ### Co-norm
 
@@ -243,11 +283,13 @@ T-norm is $OR$ , $\vee$ version of FL. It also has 3 different version.
 
 3. ${Co-norm}_Ł : 1 - \max \{0, 1 - (\upsilon(p) + \upsilon(q))\}$
 
+> Notice: The position of $1$ is changed
+
 ### Implication
 
 1. ${\implies}_Z: \max\{1 - \upsilon(p),\upsilon(q) \}$
 
-2. ${\implies}_M: \upsilon(p). \upsilon(q) + (1- \upsilon(q))$
+2. ${\implies}_M: \upsilon(p). \upsilon(q) + (1- \upsilon(p))$
 
 3. ${\implies}_Ł : \min \{1, 1 + (\upsilon(q) - \upsilon(p))\}$
 
@@ -261,18 +303,29 @@ Let $\alpha$ be a fuzzy value then $\alpha$ complement is: $\alpha^c = 1 - \upsi
 
 ### Exercises
 
-| $\alpha$       | $(-2,0)$ | $(-1,0.3)$ | $(1,0.5)$ | $(0,1)$   | $(4,0)$   | $(3,0.7)$ | $(6,0.2)$ |
-|:--------------:|:--------:|:----------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| $\beta$        | $(-2,1)$ | $(-1,1)$   | $(1,0.8)$ | $(0,0.5)$ | $(4,0.1)$ | $(3,1)$   | $(6,001)$ |
-| ${T-norm}_Z$   |          |            |           |           |           |           |           |
-| ${T-norm}_M$   |          |            |           |           |           |           |           |
-| ${T-norm}_Ł$   |          |            |           |           |           |           |           |
-| ${Co-norm}_Z$  |          |            |           |           |           |           |           |
-| ${Co-norm}_M$  |          |            |           |           |           |           |           |
-| ${Co-norm}_Ł$  |          |            |           |           |           |           |           |
-| ${\implies}_Z$ |          |            |           |           |           |           |           |
-| ${\implies}_M$ |          |            |           |           |           |           |           |
-| ${\implies}_Ł$ |          |            |           |           |           |           |           |
+| $\alpha$       | $(-2,0)$  | $(-1,0.3)$  | $(1,0.5)$   | $(0,1)$    | $(4,0)$    | $(3,0.7)$  | $(6,1)$  |
+|:--------------:|:---------:|:-----------:|:-----------:|:----------:|:----------:|:----------:|:--------:|
+| $\beta$        | $(-2,1)$  | $(-1,1)$    | $(1,0.8)$   | $(0,0.5)$  | $(4,0.1)$  | $(3,1)$    | $(6,1)$  |
+|                |           |             |             |            |            |            |          |
+| ${T-norm}_Z$   | $(-2, 0)$ | $(-1, 0.3)$ | $(1, 0.5)$  | $(0, 0.5)$ | $(4, 0)$   | $(3, 0.7)$ | $(6, 1)$ |
+| ${T-norm}_M$   | $(-2, 0)$ | $(-1, 0.3)$ | $(1,0.4)$   | $(0,0.5)$  | $(4,0)$    | $(3,0.7)$  | $(6,1)$  |
+| ${T-norm}_Ł$   | $(-2, 0)$ | $(-1, 0.3)$ | $(1,0.3)$   | $(0, 0.5)$ | $(4,0)$    | $(3,0.7)$  | $(6,1)$  |
+| ${Co-norm}_Z$  | $(-2, 1)$ | $(-1, 1)$   | $(1,0.8)$   | $(0, 1)$   | $(4,0.1)$  | $(3,1)$    | $(6,1)$  |
+| ${Co-norm}_M$  | $(-2, 1)$ | $(-1, 1)$   | $(1, 0.9)$  | $(0, 1)$   | $(4, 0.1)$ | $(3, 1)$   | $(6, 1)$ |
+| ${Co-norm}_Ł$  | $(-2, 1)$ | $(-1, 1)$   | $(1, 1)$    | $(0, 1)$   | $(4, 0.1)$ | $(3, 1)$   | $(6, 1)$ |
+| ${\implies}_Z$ | $(-2,1)$  | $(-1, 1)$   | $(1, 0.8)$  | $(0, 0.5)$ | $(4, 1)$   | $(3, 1)$   | $(6, 1)$ |
+| ${\implies}_M$ | $(-2,1 )$ | $(-1, 1)$   | $(1, 0.66)$ | $(0,0.5)$  | $(4,1 )$   | $(3, 1)$   | $(6,1 )$ |
+| ${\implies}_Ł$ | $(-2, 1)$ | $(-1, 1)$   | $(1, 1)$    | $(0, 0.5)$ | $(4,1)$    | $(3, 1)$   | $(6,1)$  |
+
+> In oder to be a valid Fuzzy logic operator, it has to be a valid operator in 2 values logic i.e. $T-norm_{M}$ should act as $\wedge$  in 2 values logic
+> 
+> $T-norm_{M}(1,1)  = 1 \wedge 1 = 1$ if we check for all possible cases and it has the same output as $\wedge$ they we say $T-norm_{M}$ is a valid fuzzy logic operator
+
+> Trick to remember $T-norm_{Ł}$ if sum of components are greater than $1$ take the diff $|p - q|$ else $0$ `Todo: double check this`
+
+> Trick to remember $Co-norm_{Ł}$ if sum of components are greater than $1$ then the result will be $0$
+
+> When invole one or both value in $\{0,1\}$ all the formulars will have the same output value. In another words, $T-norm_{Z, M, L}$ values should be the same
 
 ## Fuzzy relations
 
@@ -290,7 +343,7 @@ Let $R,S \subset U, M_{R}(x,y), M_{r}(x,y) \in [0,1]$
 
 1. $R \cap_{Z} S = \max \{ M_{R}(x,y), M_{S}(x,y) \}$
 2. $R \cap_{M} S = (M_{R}(x,y)+M_{S}(x,y)) - M_{R}(x,y).M_{S}(x,y)$
-3. $R \cap_{Ł} S = \max \{0,1 - (M_{R}(x,y) + M_{S}(x,y))\}$
+3. $R \cap_{Ł} S = 1 - \max \{0,1 - (M_{R}(x,y) + M_{S}(x,y))\}$
 
 ### Complementation
 
@@ -304,29 +357,50 @@ $R \subset S  = M_{R}(x,y) \le M_{S}(x,y)$
 
 #### E1:
 
-1. something
+1. Complete the table
 
 | $R$ | $a$ | $b$ | $c$ | $d$ |
 |:---:|:---:|:---:|:---:|:---:|
-| $a$ |     |     |     |     |
-| $b$ |     |     |     |     |
-| $c$ |     |     |     |     |
-| $d$ |     |     |     |     |
+| $a$ | 0.5 | 0.1 | 0.8 | 0.9 |
+| $b$ | 0   | 1   | 0.3 | 0.7 |
+| $c$ | 0.2 | 0.1 | 1   | 0   |
+| $d$ | 0   | 1   | 1   | 0.4 |
 
 | $S$ | $a$ | $b$ | $c$ | $d$ |
 |:---:|:---:|:---:|:---:|:---:|
-| $a$ |     |     |     |     |
-| $b$ |     |     |     |     |
-| $c$ |     |     |     |     |
-| $d$ |     |     |     |     |
+| $a$ | 0.2 | 0.2 | 0.2 | 1   |
+| $b$ | 0.1 | 0   | 0   | 1   |
+| $c$ | 0.1 | 0.9 | 0.1 | 1   |
+| $d$ | 0.3 | 0.1 | 0.1 | 0.2 |
 
-| $R {\cup}_M S$ | $a$ | $b$ | $c$ | $d$ |
+| $R {\cup}_M S$ | $a$  | $b$  | $c$  | $d$  |
+|:--------------:|:----:|:----:|:----:|:----:|
+| $a$            | 0.6  | 0.28 | 0.16 | 1    |
+| $b$            | 0.1  | 1    | 0.3  | 1    |
+| $c$            | 0.28 | 0.91 | 1    | 1    |
+| $d$            | 0.3  | 1    | 1    | 0.08 |
+
+| $R {\cup}_Z S$ | $a$ | $b$ | $c$ | $d$ |
 |:--------------:|:---:|:---:|:---:|:---:|
-| $a$            |     |     |     |     |
-| $b$            |     |     |     |     |
-| $c$            |     |     |     |     |
-| $d$            |     |     |     |     |
+| $a$            | 0.5 | 0.2 | 0.8 | 1   |
+| $b$            | 0.1 | 1   | 0.3 | 1   |
+| $c$            | 0.2 | 0.9 | 1   | 1   |
+| $d$            | 0.3 | 1   | 1   | 0.4 |
 
-# Disclaimer
+| $R {\cup}_Ł S$ | $a$ | $b$ | $c$ | $d$ |
+|:--------------:|:---:|:---:|:---:|:---:|
+| $a$            | 0.7 | 0.3 | 1   | 1   |
+| $b$            | 0.1 | 1   | 0.3 | 1   |
+| $c$            | 0.3 | 1   | 1   | 1   |
+| $d$            | 0.3 | 1   | 1   | 0.6 |
 
-For the same logic operator in Fuzzy, Binary, or Trinary, we were presented different formulas for them. This version of the cheat sheet is easier for me to remember, therefore I have it like this.
+* Find $I$ for $I \subset S$
+
+| $I$ | $a$ | $b$ | $c$ | $d$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $a$ | 0.1 | 0.2 | 0.2 | 0   |
+| $b$ | 0.1 | 0   | 0   | 0   |
+| $c$ | 0.1 | 0.5 | 0.1 | 0   |
+| $d$ | 0.2 | 0.1 | 0.1 | 0.2 |
+
+> All relations in $I$ should has values smaller than or the same as $R$
