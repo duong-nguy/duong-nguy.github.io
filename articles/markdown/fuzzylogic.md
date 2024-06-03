@@ -329,21 +329,21 @@ Let $\alpha$ be a fuzzy value then $\alpha$ complement is: $\alpha^c = 1 - \upsi
 
 ## Fuzzy relations
 
-For intersection ($\cap$) and union ($\cup$) we will reuse the notion of $Co-norm$ and $T-norm$ respectively. We also introduced to subset.
+For intersection ($\cap$) and union ($\cup$) we will reuse the notion of $T-norm$ and $Co-norm$ respectively. We also introduced to subset.
 
 ### Intersection
 
 Let $R,S \subset U, M_{R}(x,y), M_{r}(x,y) \in [0,1]$
 
-1. $R \cup_{Z} S = \min \{ M_{R}(x,y), M_{S}(x,y) \}$
-2. $R \cup_{M} S =  M_{R}(x,y).M_{S}(x,y)$
-3. $R \cup_{Ł} S = \max \{0,M_{R}(x,y) + M_{S}(x,y) - 1\}$
+1. $R \cap_{Z} S = \min \{ M_{R}(x,y), M_{S}(x,y) \}$
+2. $R \cap_{M} S =  M_{R}(x,y).M_{S}(x,y)$
+3. $R \cap_{Ł} S = \max \{0,M_{R}(x,y) + M_{S}(x,y) - 1\}$
 
 ### Union
 
-1. $R \cap_{Z} S = \max \{ M_{R}(x,y), M_{S}(x,y) \}$
-2. $R \cap_{M} S = (M_{R}(x,y)+M_{S}(x,y)) - M_{R}(x,y).M_{S}(x,y)$
-3. $R \cap_{Ł} S = 1 - \max \{0,1 - (M_{R}(x,y) + M_{S}(x,y))\}$
+1. $R \cup_{Z} S = \max \{ M_{R}(x,y), M_{S}(x,y) \}$
+2. $R \cup_{M} S = (M_{R}(x,y)+M_{S}(x,y)) - M_{R}(x,y).M_{S}(x,y)$
+3. $R \cup_{Ł} S = 1 - \max \{0,1 - (M_{R}(x,y) + M_{S}(x,y))\}$
 
 ### Complementation
 
@@ -357,7 +357,7 @@ $R \subset S  = M_{R}(x,y) \le M_{S}(x,y)$
 
 #### E1:
 
-1. Complete the table
+1. Complete the tables
 
 | $R$ | $a$ | $b$ | $c$ | $d$ |
 |:---:|:---:|:---:|:---:|:---:|
