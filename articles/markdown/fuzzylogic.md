@@ -265,7 +265,7 @@ We were introduced to 3 fuzzy operations, each of them has 3 versions: Zadeh, Me
 
 ### T-norm
 
-Co-norm is a different way to say $AND$ or $\wedge$ in FL.
+T-norm is a different way to say $AND$ or $\wedge$ in FL.
 
 1. ${T-norm}_Z : \min\{\upsilon (p),\upsilon(q)\}$
 
@@ -275,7 +275,7 @@ Co-norm is a different way to say $AND$ or $\wedge$ in FL.
 
 ### Co-norm
 
-T-norm is $OR$ , $\vee$ version of FL. It also has 3 different version.
+Co-norm is $OR$ , $\vee$ version of FL. It also has 3 different version.
 
 1. ${Co-norm}_Z: \max\{\upsilon(p),\upsilon(q) \}$
 
